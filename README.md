@@ -33,4 +33,31 @@ ls
 cd /etc/collectd/  
 less collectd.conf // write_graphite // memcached  
 cd ~  
+git clone https://github.com/szyrin/devops5.git  
+which puppet  
+cd devops5/diamond/  
+sudo puppet apply ./diamond.pp  
+sudo diamond -h  // config!  
+less diamond.conf  // prefix
+sudo diamond -c diamond.conf  
+ps aux | grep diamond  
+cd /opt/graphite/storage/whisper/diamond/  
+ls  
+
+----
+
+cd /etc/apache2/sites-enabled  
+sudo vim graphite.conf  
+sudo service apache2 status  
+sudo service apache2 stop  
+sudo service apache2 start  
+
+----  
+
+https://github.com/scobal/seyren  
+// install mongo  
+ps uax | grep mongo  
+telnet localhost 27017  
+wget https://github.com/scobal/seyren/releases/download/1.5.0/seyren-1.5.0.jar
+  
 
