@@ -59,5 +59,11 @@ https://github.com/scobal/seyren
 ps uax | grep mongo  
 telnet localhost 27017  
 wget https://github.com/scobal/seyren/releases/download/1.5.0/seyren-1.5.0.jar
-  
+./seyren.sh  
+tail -f seyren.out  
+// checks - create check - cpu - collectd.graphite.cpu-0.cpu-idle - 90 - 95 (allow no data)  
+// будем в консоли слушать порт  
+nc -l 9999  
+// add subscription - http://127.0.0.1:9999 - type http   
+// test :)  
 
