@@ -1,5 +1,5 @@
 # devops5  
-https://github.com/obfuscurity/synthesize  
+https://github.com/szyrin/synthesize/
 vagrant plugin install vagrant-vbguest  
 vagrant up  
 vagrant ssh  
@@ -57,7 +57,18 @@ sudo service apache2 start
 https://github.com/scobal/seyren  
 // install mongo  
 ps uax | grep mongo  
-telnet localhost 27017  
+telnet localhost 27017
+  
+wget https://github.com/frekele/oracle-java/releases/download/8u211-b12/jdk-8u211-linux-x64.tar.gz
+sudo mkdir /usr/lib/jvm/
+sudo tar -zxvf jdk-8u211-linux-x64.tar.gz -C /usr/lib/jvm/
+sudo update-alternatives --install /usr/bin/java java /usr/lib/jvm/jdk1.8.0_211/bin/java 3
+sudo update-alternatives --config java
+sudo fallocate -l 1G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+
 wget https://github.com/scobal/seyren/releases/download/1.5.0/seyren-1.5.0.jar
 ./seyren.sh  
 tail -f seyren.out  
